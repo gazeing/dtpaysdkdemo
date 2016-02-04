@@ -1,0 +1,4 @@
+include ':app'
+//, ':SDKLibrary-debug'
+//include ':SDKlibrary'
+//project(':SDKlibrary').projectDir = new File(settingsDir,'../DTPaySDK/SDKlibrary')

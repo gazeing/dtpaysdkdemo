@@ -1,0 +1,26 @@
+.DS_Store
+# Built application files
+*.apk
+*.ap_
+*.iml
+release_notes.html
+
+# Generated files
+bin/
+gen/
+XyoAndroidApp/bin/
+XyoAndroidApp/gen/
+
+# Gradle files
+.gradle/
+build/
+XyoAndroidApp/.gradle/
+XyoAndroidApp/build/
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+#intelli
+.idea/
+XyoAndroidApp/.idea/
+

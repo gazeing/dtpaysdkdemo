@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="configure_app_wall_siteid_default">2770</string>
+    <string name="configure_app_wall_siteid_new">9292</string>
+    <string name="cache_cache_indicator_toggle_default">true</string>
+    <string name="cache_track_opens_toggle_default">true</string>
+    <string name="configure_app_wall_enable_hw_accel_default">true</string>
+    <string name="title_activity_configure_ad_parameters">Configure Parameters</string>
+    <string name="title_activity_embedded_app_wall">EmbeddedAppWall</string>
+    <string name="title_activity_embedded_in_tabs_app_wall">Embedded AppWall</string>
+    <string name="title_activity_embedded_banner_ad">EmbeddedBannerAd</string>
+</resources>

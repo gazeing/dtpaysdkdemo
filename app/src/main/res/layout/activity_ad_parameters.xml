@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <TextView
+            android:text="Appia Parameters"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            
+        </TextView>
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            layout="@layout/activity_ad_parameters_header" />
+
+        <ListView
+            android:id="@+id/listview_appia_parameters"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="beforeDescendants"
+            android:focusable="false"
+            tools:listitem="@layout/activity_ad_parameter_row" >
+
+        </ListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        
+        <TextView
+            android:text="User Parameters"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </TextView>    
+            
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            layout="@layout/activity_ad_parameters_header" />
+
+        <ListView
+            android:id="@+id/listview_user_parameters"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:descendantFocusability="beforeDescendants"
+            tools:listitem="@layout/activity_ad_parameter_row" >
+        </ListView>
+    </LinearLayout>
+
+</LinearLayout>
