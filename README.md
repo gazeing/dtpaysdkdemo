@@ -24,10 +24,10 @@ dependencies {
 `compile 'DTPaySDK:SDKLibrary:0.9.9'`
  
 ####After that:
-1. Declare a dtpay client:
+#####Declare a dtpay client:
  `DTPayClient client;`
 
-2. You have to initialise your client before use it:
+#####You have to initialise your client before use it:
 ```
  private void initDTPay() {
       client = new DTPayClientBuilder(this)
@@ -35,7 +35,7 @@ dependencies {
               .build();
   }
 ```
-3. DTPayResponseListner will be required to get notification from api, you also can set your own UI and viewmodel via the following methonds of DTPayClientBuilder:  
+#####DTPayResponseListner will be required to get notification from api, you also can set your own UI and viewmodel via the following methonds of DTPayClientBuilder:  
 
  ```
  public DTPayClientBuilder setPresenter(DTPayPrestenter presenter)
@@ -48,10 +48,53 @@ If they are not called, default UI and viewmodel will be used.
 ![Alt text](/snap/3.png?raw=true "default UI")
 
  
-4. Then, you can use the following methods to make purchases and check their status:
+#####Then, you can use the following methods to make purchases and check their status:
 ```
  client.markPurchase(client.getVirtualGoods("Magic Sword", 792));
  client.checkBillingStatus(reference);
+```
+
+You will set a `DTPayResponseListner` here to get result:
+```
+public class DTPayActivity extends AppCompatActivity implements DTPayResponseListner {
+...
+  @Override
+    public void OnPurchaseResponse(PurchaseResponse response) {
+        ...//do you logic
+    }
+
+    @Override
+    public void OnBillingResponse(BillingStatusResponse response) {
+        ...//do you logic
+    }
+
+    @Override
+    public void OnError(String Error) {
+       ...//do you error logic
+    }
+
+
+```
+`PurchaseResponse` response code meaning:
+```
+    public enum ResponseCode
+    {
+        Ok,
+        Error,
+        AuthenticationFailed
+    }
+```
+
+`BillingStatusResponse` response code meaning:
+```
+    public enum SuccessStatus
+    {
+        Success,
+        Failed,
+        NotFound,
+        Pending
+    }
+
 ```
 
 ##Appia integration guide
