@@ -26,6 +26,7 @@ dependencies {
 ####After that:
 1. Declare a dtpay client:
  `DTPayClient client;`
+
 2. You have to initialise your client before use it:
 ```
  private void initDTPay() {
@@ -39,9 +40,11 @@ dependencies {
  public DTPayClientBuilder setPresenter(DTPayPrestenter presenter)
  public DTPayClientBuilder setViewModel(DTPayViewModel vm)
  ```
-  If they are not called, default UI and viewmodel will be used.
+If they are not called, default UI and viewmodel will be used.
   
-  ![Alt text](/snap/1.png?raw=true "default UI")
+![Alt text](/snap/1.png?raw=true "default UI")
+![Alt text](/snap/2.png?raw=true "default UI")
+![Alt text](/snap/3.png?raw=true "default UI")
 
  
 4. Then, you can use the following methods to make purchases and check their status:
