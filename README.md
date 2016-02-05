@@ -36,12 +36,13 @@ dependencies {
   }
 ```
 3. DTPayResponseListner will be required to get notification from api, you also can set your own UI and viewmodel via the following methonds of DTPayClientBuilder:  
+
  ```
  public DTPayClientBuilder setPresenter(DTPayPrestenter presenter)
  public DTPayClientBuilder setViewModel(DTPayViewModel vm)
  ```
 If they are not called, default UI and viewmodel will be used.
-  
+ 
 ![Alt text](/snap/1.png?raw=true "default UI")
 ![Alt text](/snap/2.png?raw=true "default UI")
 ![Alt text](/snap/3.png?raw=true "default UI")
