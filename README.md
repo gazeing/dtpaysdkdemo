@@ -50,9 +50,12 @@ If they are not called, default UI and viewmodel will be used.
  
 #####Then, you can use the following methods to make purchases and check their status:
 ```
- client.markPurchase(client.getVirtualGoods("Magic Sword", 792));
+ client.markPurchase(client.getVirtualGoods("Magic Sword", 792));//the magic number "792" here actually is the tariff id. 
+                                                                 //it shows the price of item
+                                                                 //you can find it from price list
  client.checkBillingStatus(reference);
 ```
+[price list](http://pay.fortumo.com/mobile_payments/654669bc7608ac16fc53861bda88c12b.xml)
 
 You will set a `DTPayResponseListner` here to get result:
 ```
